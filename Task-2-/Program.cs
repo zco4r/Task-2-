@@ -94,7 +94,29 @@ class Program
 
         } while (guess != secret);
         //----------------------------------------------------------------------------5
+        
+        try
+        {
+            Console.Write("Enter the first number: ");
+            int num1 = int.Parse(Console.ReadLine());
 
+            Console.Write("Enter the second number: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            int result = num1 / num2;
+
+            Console.WriteLine("The result is: " + result);
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Error: You cannot divide by zero.");
+                    
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Error: Please enter valid numbers.");
+        }
+        //---------------------------------------------------------------------------6
     }
 }
         
