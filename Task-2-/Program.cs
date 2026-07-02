@@ -51,21 +51,21 @@ class Program
          
         //--------------------------------------------------------------------3
 
-                string realPassword = "Spark2026";
-                string userInput = "";
+        string realPassword = "Spark2026";
+        string userInput = "";
 
-                Console.WriteLine("Please enter the password:");
-                userInput = Console.ReadLine();
+        Console.WriteLine("Please enter the password:");
+        userInput = Console.ReadLine();
 
-                while (userInput != realPassword)
-                {
-                    Console.WriteLine("Incorrect password, try again");
+        while (userInput != realPassword)
+        {
+        Console.WriteLine("Incorrect password, try again");
             
-                    userInput = Console.ReadLine();
-                }
+        userInput = Console.ReadLine();
+        }
 
-                Console.WriteLine("Access Granted");
-                //-----------------------------------------------------------4
+        Console.WriteLine("Access Granted");
+        //--------------------------------------------------------------------4
 
 
     }
