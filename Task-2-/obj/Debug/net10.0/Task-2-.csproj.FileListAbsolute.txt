@@ -12,3 +12,4 @@
 /Users/ammaralazki/RiderProjects/Task-2-/Task-2-/obj/Debug/net10.0/Task-2-.pdb
 /Users/ammaralazki/RiderProjects/Task-2-/Task-2-/obj/Debug/net10.0/Task-2-.genruntimeconfig.cache
 /Users/ammaralazki/RiderProjects/Task-2-/Task-2-/obj/Debug/net10.0/ref/Task-2-.dll
+/Users/ammaralazki/RiderProjects/Task-2-/Task-2-/obj/Debug/net10.0/Task-2-.sourcelink.json
