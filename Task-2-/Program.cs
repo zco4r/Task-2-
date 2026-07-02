@@ -35,12 +35,27 @@ class Program
 
         Console.WriteLine("The sum is: " + sum);
         //-------------------------------------------------------------------2
-
-
         
         
-            }
+        Console.WriteLine("Enter a number to see its multiplication table:");
+        string input = Console.ReadLine();
+        int number = int.Parse(input);
+        
+         for (int i = 1; i <= 10; i = i + 1)
+         {
+          
+          int result = number * i;
+          
+          Console.WriteLine(number + " x " + i + " = " + result);
         }
+         
+        //--------------------------------------------------------------------3
+                
+
+        
+
+    }
+}
         
         
     
