@@ -1,3 +1,6 @@
+namespace Task_2_;
+
+class Program
 {
     static void Main()
     {
