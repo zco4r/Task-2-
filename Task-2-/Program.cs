@@ -1,4 +1,4 @@
-namespace Task_2_;
+﻿namespace Task_2_;
 
 class Program
 {
@@ -22,6 +22,25 @@ class Program
             Console.WriteLine("Invalid input. Please enter a valid integer.");
         }
         //------------------------------------------------------------------------1
- 
+        Console.WriteLine("Enter a number (N) to calculate the sum:");
+        string input2 = Console.ReadLine();
+        int n = int.Parse(input2);
+
+        int sum = 0;
+
+        for (int i = 1; i <= n; i = i + 1)
+        {
+            sum = sum + i;
+        }
+
+        Console.WriteLine("The sum is: " + sum);
+        //-------------------------------------------------------------------2
+
+        
+        
             }
         }
+        
+        
+    
+
