@@ -117,6 +117,45 @@ class Program
             Console.WriteLine("Error: Please enter valid numbers.");
         }
         //---------------------------------------------------------------------------6
+                
+        bool isRunning = true;
+
+        while (isRunning)
+        {
+            Console.WriteLine("\nChoose an option:");
+            Console.WriteLine("1) Say Hello");
+            Console.WriteLine("2) Show Current Time-of-day Greeting");
+            Console.WriteLine("3) Exit");
+            Console.Write("Your choice: ");
+
+            try
+            {
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("Hello!");
+                        break;
+                    case 2:
+                        Console.WriteLine("Good day!");
+                        break;
+                    case 3:
+                        isRunning = false;
+                        Console.WriteLine("Exiting program.");
+                        break;
+                    default:
+                        Console.WriteLine("Please choose 1, 2, or 3.");
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid input! Please enter a number.");
+            }
+        }
+        //--------------------------------------------------------------------------------7
+        
     }
 }
         
