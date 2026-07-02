@@ -66,7 +66,34 @@ class Program
 
         Console.WriteLine("Access Granted");
         //--------------------------------------------------------------------4
+        int secret = 42;
+        
+        int guess;
+        int attempts = 0;
 
+        do
+        {
+            Console.Write("Guess the secret number: ");
+            string inpuT = Console.ReadLine();
+            guess = int.Parse(inpuT);
+            
+            attempts = attempts + 1;
+
+            if (guess > secret)
+            {
+                Console.WriteLine("Too high");
+            }
+            else if (guess < secret)
+            {
+                Console.WriteLine("Too low");
+            }
+            else
+            {
+                Console.WriteLine("Correct! It took you " + attempts + " attempts.");
+            }
+
+        } while (guess != secret);
+        //----------------------------------------------------------------------------5
 
     }
 }
