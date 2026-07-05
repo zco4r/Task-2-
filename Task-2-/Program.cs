@@ -171,6 +171,43 @@ class Program
 
         Console.WriteLine("The sum of even numbers is: " + sum);
     //-------------------------------------------------------------------------------------8
+    
+
+        int x = 0;
+        bool isValid = false;
+
+        do
+        {
+            try
+            {
+                Console.Write("Enter a positive whole number: ");
+                x = int.Parse(Console.ReadLine());
+                
+                if (x > 0)
+                {
+                    isValid = true;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a number greater than zero.");
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid input! Please enter a valid whole number.");
+            }
+        } 
+        while (!isValid);
+
+        int Sum = 0;
+        for (int i = 1; i <= x; i = i + 1)
+        {
+            Sum = Sum + i;
+        }
+
+        Console.WriteLine("The Sum of numbers from 1 to " + x + " is: " + Sum);
+        //------------------------------------------------------------------------------9
+
 
         
     }
