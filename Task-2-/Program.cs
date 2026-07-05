@@ -208,6 +208,84 @@ class Program
         Console.WriteLine("The Sum of numbers from 1 to " + x + " is: " + Sum);
         //------------------------------------------------------------------------------9
 
+        int correctPin = 1234;
+        decimal balance = 100.000m;
+        int Attempts = 0;
+        bool isAuthenticated = false;
+
+        while (Attempts < 3)
+        {
+            try
+            {
+                Console.Write("Enter your PIN: ");
+                int enteredPin = int.Parse(Console.ReadLine());
+
+                if (enteredPin == correctPin)
+                {
+                    isAuthenticated = true;
+                    break;
+                }
+                else
+                {
+                    Attempts = Attempts + 1;
+                    Console.WriteLine("Wrong PIN.");
+                }
+            }
+            catch (Exception)
+            {
+                Attempts = Attempts + 1;
+                Console.WriteLine("Invalid input. Counts as a wrong attempt.");
+            }
+        }
+
+        if (!isAuthenticated)
+        {
+            Console.WriteLine("Card Blocked");
+            return;
+        }
+
+        bool running = true;
+        while (running)
+        {
+            Console.WriteLine("\n1) Deposit, 2) Withdraw, 3) Check Balance, 4) Exit");
+            Console.Write("Choose an option: ");
+
+            try
+            {
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1: 
+                        Console.Write("Enter deposit amount: ");
+                        decimal dep = decimal.Parse(Console.ReadLine());
+                        if (dep > 0) { balance = balance + dep; Console.WriteLine("New Balance: " + balance); }
+                        else Console.WriteLine("Invalid amount.");
+                        break;
+                    case 2: 
+                        Console.Write("Enter withdrawal amount: ");
+                        decimal with = decimal.Parse(Console.ReadLine());
+                        if (with > 0 && with <= balance) { balance = balance - with; Console.WriteLine("New Balance: " + balance); }
+                        else Console.WriteLine("Invalid amount or insufficient funds.");
+                        break;
+                    case 3: 
+                        Console.WriteLine("Current Balance: " + balance);
+                        break;
+                    case 4: 
+                        running = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice.");
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid input.");
+            }
+        }
+        //-------------------------------------------------------------------------------10
+
+
 
         
     }
