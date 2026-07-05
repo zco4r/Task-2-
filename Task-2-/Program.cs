@@ -155,6 +155,23 @@ class Program
             }
         }
         //--------------------------------------------------------------------------------7
+
+        Console.Write("Enter a positive whole number (N): ");
+        int N = int.Parse(Console.ReadLine());
+        
+        int SUM = 0;
+
+        for (int i = 1; i <= n; i = i + 1)
+        {
+            if (i % 2 == 0)
+            {
+                sum = sum + i;
+            }
+        }
+
+        Console.WriteLine("The sum of even numbers is: " + sum);
+    //-------------------------------------------------------------------------------------8
+
         
     }
 }
